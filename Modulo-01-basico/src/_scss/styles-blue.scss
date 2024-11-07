@@ -1,14 +1,4 @@
 $base-color: #3498db;
-$darken-1: adjust-color($base-color, $lightness: -10%);
-$darken-2: adjust-color($base-color, $lightness: -20%);
-$darken-3: adjust-color($base-color, $lightness: -30%);
-$darken-4: adjust-color($base-color, $lightness: -40%);
-$lighten-1: adjust-color($base-color, $lightness: 10%);
-$lighten-2: adjust-color($base-color, $lightness: 20%);
-$lighten-3: adjust-color($base-color, $lightness: 30%);
-$lighten-4: adjust-color($base-color, $lightness: 40%);
 
-$font-family: "Roboto", sans-serif;
-$font-family-secondary: monospace;
-
+@import 'functions';
 @import 'common-styles';

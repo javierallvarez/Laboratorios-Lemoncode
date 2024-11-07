@@ -1,0 +1,45 @@
+// Función para generar sombras de un color
+// Ejemplo -> generate-shades(#3498db, 4) devuelve (#2e7ab8, #26629f, #1e4a86, #16326d)
+@function generate-shades($color, $steps) {
+    
+    // Por cada paso, se genera un color con un 10% más clarico y se agrega al array [shades]
+    $shades: ();
+    @for $i from 1 through $steps {
+        $darker-color: adjust-color($color, $lightness: -($i * 10%));
+        $shades: append($shades, $darker-color, comma);
+    }
+
+    // Retorno el array de colores para poder usarlo en styles-blue.scss y styles-red.scss
+    @return $shades;
+}
+
+
+// Funccion para generar tintes de un color
+// Ejemplo -> generate-tints(#3498db, 4) devuelve (#4aa6e1, #5ab0e6, #6abaf0, #7ac4fb)
+@function generate-tints($color, $steps) {
+    
+    $tints: ();
+    @for $i from 1 through $steps {
+        $lighter-color: adjust-color($color, $lightness: ($i * 10%));
+        $tints: append($tints, $lighter-color, comma);
+    }
+
+    @return $tints;
+}
+
+
+$darken-colors: generate-shades($base-color, 4);
+$lighten-colors: generate-tints($base-color, 4);
+
+$darken-1: nth($darken-colors, 1);
+$darken-2: nth($darken-colors, 2);
+$darken-3: nth($darken-colors, 3);
+$darken-4: nth($darken-colors, 4);
+
+$lighten-1: nth($lighten-colors, 1);
+$lighten-2: nth($lighten-colors, 2);
+$lighten-3: nth($lighten-colors, 3);
+$lighten-4: nth($lighten-colors, 4);
+
+$font-family: "Roboto", sans-serif;
+$font-family-secondary: monospace;
