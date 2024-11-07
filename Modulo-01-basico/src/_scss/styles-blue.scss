@@ -1,0 +1,124 @@
+$base-color: #3498db;
+$darken-1: adjust-color($base-color, $lightness: -10%);
+$darken-2: adjust-color($base-color, $lightness: -20%);
+$darken-3: adjust-color($base-color, $lightness: -30%);
+$darken-4: adjust-color($base-color, $lightness: -40%);
+$lighten-1: adjust-color($base-color, $lightness: 10%);
+$lighten-2: adjust-color($base-color, $lightness: 20%);
+$lighten-3: adjust-color($base-color, $lightness: 30%);
+$lighten-4: adjust-color($base-color, $lightness: 40%);
+
+$font-family: "Roboto", sans-serif;
+$font-family-secondary: monospace;
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+
+.container-1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: $font-family;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  text-align: center;
+
+  &.darken-4 { background-color: $darken-4; }
+  &.darken-3 { background-color: $darken-3; }
+  &.darken-2 { background-color: $darken-2; }
+  &.darken-1 { background-color: $darken-1; }
+  &.base-color { background-color: $base-color; }
+  &.lighten-1 { background-color: $lighten-1; }
+  &.lighten-2 { background-color: $lighten-2; }
+  &.lighten-3 { background-color: $lighten-3; }
+  &.lighten-4 { background-color: $lighten-4; }
+}
+
+
+.container-2{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem;
+
+  .box-ej2 {
+    @extend .box;
+    background: $base-color;
+  }
+
+  .important-box {
+    background: $darken-4;
+  }
+
+  .warning-box {
+    background: $lighten-4;
+    color: black;
+  }
+
+  .primary-font {
+    font-family: $font-family;
+  }
+
+  .secondary-font {
+    font-family: $font-family-secondary;
+  }
+
+  .shadow-box {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.706);
+  }
+}
+
+
+.container-3 {
+  width: 100%;
+
+  .nav-bar {
+    display: flex;
+    gap: 1rem;
+    background-color: $darken-4;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    .nav-item {
+      text-decoration: none;
+      color: white;
+      font-family: $font-family;
+      font-size: 1rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 1rem;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+
+      }
+
+      &:hover {
+        background-color: $base-color;
+        transition: 0.5s;
+      }
+    }
+  }
+
+}
