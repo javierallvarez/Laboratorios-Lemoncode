@@ -27,11 +27,15 @@ const myArray4 = ["Teddy", "Viertes"];
 const myArray5 = ["Kenny", "Bell"];
 
 const superConcatenator2 = (...arrays) => {
-    return arrays.reduce((acumulador, array) => [...acumulador, ...array], []);
+    const result = arrays.reduce((arrayFinal, array) => {
+        console.log('arrayFinal:', arrayFinal, '\n array:', array);
+        return [...arrayFinal, ...array];
+    }, []);
+    return result;
 }
 
 const concatResult2 = superConcatenator2(myArray1, myArray2, myArray3, myArray4, myArray5);
 console.log('concatResult2 ==>', concatResult2); // ["Lapan", "Toja", "Mario", "Netas", "Bertin", "Ousborne", "Teddy", "Viertes", "Kenny", "Bell"]
 
 // ==> Uso rest para recoger los arrays de entrada y con reduce concateno todos los arrays en uno solo.
-// ==> acumulador es el array que se va formando con cada iteración, y array es el array que se va a concatenar en cada iteración.
+// ==> En cada iteración, concateno cada array y se lo paso al arrayFinal, que es el acumulador.
