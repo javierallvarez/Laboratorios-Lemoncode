@@ -1,0 +1,39 @@
+$primary-color: #007bff;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  background: radial-gradient(circle, #535178, #121212);
+  height: 100vh;
+}
+
+h1 {
+  color: $primary-color;
+  font-size: 2em;
+  margin-top: 20px;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+  animation: spin 7s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
