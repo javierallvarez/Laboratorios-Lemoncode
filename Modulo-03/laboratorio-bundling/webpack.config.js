@@ -56,7 +56,7 @@ module.exports = {
             template: './src/index.html',
         }),
         isDevelopment && new ReactRefreshWebpackPlugin(),
-        process.env.analyze && new BundleAnalyzerPlugin({ // Condicional para el análisis
+        process.env.analyze && new BundleAnalyzerPlugin({
             analyzerMode: 'static',
             openAnalyzer: false,
             reportFilename: path.join(__dirname, 'reports/bundle-report.html'),
