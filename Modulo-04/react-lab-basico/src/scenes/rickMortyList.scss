@@ -1,0 +1,50 @@
+.rick-morty-list {
+  max-width: 1200px;
+  margin: auto;
+
+  .search-field {
+    margin-bottom: 1rem !important;
+  }
+
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+
+  .error-alert, .info-alert {
+    margin-bottom: 1rem;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .character-card {
+      flex: 1 1 calc(33.333% - 1rem);
+      display: flex;
+      flex-direction: column;
+      min-width: 300px;
+
+      .card-content {
+        flex-grow: 1;
+
+        .details-link {
+          margin-top: 1rem;
+
+          .link {
+            color: #1976d2;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+  }
+}
