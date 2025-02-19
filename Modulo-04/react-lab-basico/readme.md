@@ -25,5 +25,5 @@ npm start
 
 ## Screenshots
 
-![Captura de Pantalla](/src/assets/image-1.png)
-![Captura de pantalla 2](/src/assets/image-2.png)
+![Captura de Pantalla](./src/assets/image-1.png)
+![Captura de pantalla 2](./src/assets/image-2.png)
