@@ -1,7 +1,7 @@
 # Ejercicio: ToDo App con Vue
 
 ### Vista principal
-![Vista principal](assets/todofy.png)
+![Vista principal](src/assets/todofy.png)
 
 ## Funcionalidades
 ### **Añadir tareas**
